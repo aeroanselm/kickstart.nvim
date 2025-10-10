@@ -119,6 +119,14 @@ return {
           end,
         },
       }
+      local julia_config = require('user.lsp.julials').config
+
+      if vim.lsp and vim.lsp.config then
+        vim.lsp.config['julials'] = julia_config
+        vim.lsp.enable 'julials'
+      else
+        require('lspconfig').julials.setup(julia_config)
+      end
     end,
   },
 }

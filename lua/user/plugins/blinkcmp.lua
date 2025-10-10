@@ -16,6 +16,7 @@ return {
         opts = {},
       },
       'folke/lazydev.nvim',
+      'rafamadriz/friendly-snippets',
     },
     opts = {
       keymap = {
